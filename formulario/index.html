@@ -1,0 +1,216 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>SISTEMA</title>
+
+		<style>
+			
+		div label{
+				float: left;
+				width: 15%;
+		}
+		input{
+				border: solid 2px black;
+			}
+
+.error{
+	border: solid 4px red;
+}
+
+		</style>
+
+		</head>
+	<body>
+		<h1>FORMULARIOS SISTEMA AGENDA MEDICA</h1>
+	 <div class="from">
+			<form action="almacenar.php" method="POST" name="form1">
+				<fieldset>
+				<legend>INGRESO PACIENTE</legend>
+				<div class="<? echo $claseid; ?>">
+				<label FOR="id_paciente">ID Paciente</label>
+				<input type="text" name="id_paciente" placeholder="">
+				</div> 
+				<br>
+				<div class="<? echo $clasenombre; ?>">
+				<label FOR="nombre">Nombre</label>
+				<input type="text" name="nombre" placeholder="Ingrese su nombre"> 
+				</div>
+				<br>
+				<div class="<? echo $clasetelefono; ?>">
+				<label FOR="telefono">Telefono</label>
+				<input type="text" name="telefono" placeholder="Ingrese su numero">
+				</div>
+				<br>
+				<div class="<? echo $clasecorreo; ?>">
+				<label FOR="correo">Correo</label>
+				<input type="text" name="correo" placeholder="Ingrese su e-mail">
+				</div>
+				<br>			
+				<input type="submit" value="Grabar">
+				</fieldset>
+			</form>
+			<br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+			<form action="borrar.php" method="POST">				
+				ID: <input type="text" name="id_paciente">
+				<input type="submit" value="Eliminar registro">
+			</form>
+			<br>
+
+			<form action="actualizar.php" method="POST">				
+				ID: <input type="text" name="id_paciente">
+				Nombre: <input type="text" name="nombre">				
+				Telefono: <input type="text" name="telefono">
+				Correo: <input type="text" name="correo">				
+				<input type="submit" value="Actualizar registro" name="btnActualizar">
+			</form>
+			<br>
+			<p>____________________________________________________________________________________________________________________</p>
+<h3>Crear respaldo y restauracion Sistema Agenda Horas Medicas</h3>
+
+<a href="respaldar.php">Crear Respaldo</a>
+<br>
+<br>
+<a href="restaurar.php">Restaurar Base de Datos</a>
+
+			<p>____________________________________________________________________________________________________________________</p>
+
+
+
+			<form action="medico.php" method="POST">
+				<p>INGRESO MEDICO</p>
+				<label FOR="id_medico">ID Medico</label>
+				<input type="text" name="id_medico" placeholder="" required> 
+				<br>
+				<br>
+				<label FOR="nombre">Nombre</label>
+				<input type="text" name="nombre" placeholder="Ingrese su nombre" required> 
+				<br>
+				<br>
+				<label FOR="telefono">Telefono</label>
+				<input type="text" name="telefono" placeholder="Ingrese su numero" required>
+				<br>
+				<br>
+				<label FOR="id_especialidad">ID Especialidad</label>
+				<input type="text" name="id_especialidad" placeholder="Ingrese id especialidad" required>
+				<br>
+				<br>			
+				<input type="submit" value="Grabar">
+			</form>
+			<br>
+			<form action="borrar.php" method="POST">				
+				ID: <input type="text" name="id_medico">
+				<input type="submit" value="Eliminar registro">
+			</form>
+			<br>
+			<form action="actualizar.php" method="POST">				
+				ID: <input type="text" name="id_medico">
+				Nombre: <input type="text" name="nombre">				
+				Telefono: <input type="text" name="telefono">
+				ID Esepcialidad: <input type="text" name="id_especialidad">				
+				<input type="submit" value="Actualizar registro" name="btnActualizar">
+			</form>
+			<p>____________________________________________________________________________________________________________________</p>
+			<form action="especialidad.php" method="POST">
+				<p>INGRESO ESPECIALIDAD</p>
+				<label FOR="id_especialidad">ID especialidad</label>
+				<input type="text" name="id_especialidad" placeholder="" required> 
+				<br>
+				<br>
+				<label FOR="nombre">Nombre</label>
+				<input type="text" name="nombre" placeholder="Ingrese su nombre" required> 
+				<br>
+				<br>				
+				<input type="submit" value="Grabar">
+			</form>
+			<br>
+				<form action="borrar.php" method="POST">				
+				ID: <input type="text" name="id_especialidad">
+				<input type="submit" value="Eliminar registro">
+			</form>
+			<br>
+			<form action="actualizar.php" method="POST">				
+				ID: <input type="text" name="id_especialidad">
+				Nombre: <input type="text" name="nombre">						
+				<input type="submit" value="Actualizar registro" name="btnActualizar">
+			</form>
+			<p>____________________________________________________________________________________________________________________</p>
+			</form>
+			<form action="reserva.php" method="POST">
+				<p>INGRESO RESERVA</p>
+				<label FOR="id_reserva">ID reserva</label>
+				<input type="text" name="id_reserva" placeholder="" required> 
+				<br>
+				<br>
+				<p>INGRESO PACIENTE</p>
+				<label FOR="id_paciente">ID paciente</label>
+				<input type="text" name="id_paciente" placeholder="" required> 
+				<br>
+				<br>
+				<p>INGRESO MEDICO</p>
+				<label FOR="id_medico">ID medico</label>
+				<input type="text" name="id_medico" placeholder="" required> 
+				<br>
+			
+				<p>INGRESO ESPECIALIDAD</p>
+				<label FOR="id_especialidad">ID especialidad</label>
+				<input type="text" name="id_especialidad" placeholder="" required> 
+				<br>
+				<br>
+				<label FOR="hora">HORA</label>
+				<input type="text" name="hora" placeholder="Ingrese la hora" required> 
+				<br>
+				<br>	
+				<label FOR="fecha">FECHA</label>
+				<input type="text" name="fecha" placeholder="Ingrese la fecha" required> 
+				<br>
+				<br>			
+				<input type="submit" value="Grabar">
+			</form>
+				<br>
+				<form action="borrar.php" method="POST">				
+				ID: <input type="text" name="id_paciente">
+				<input type="submit" value="Eliminar registro">
+			</form>
+			<br>
+			<form action="actualizar.php" method="POST">				
+				ID Reserva: <input type="text" name="id_reserva">
+				ID Paciente: <input type="text" name="id_paciente">				
+				ID Medico: <input type="text" name="id_medico"><br>
+				ID Especialidad: <input type="text" name="id_especialidad">	
+				Hora: <input type="text" name="hora">
+				Fecha: <input type="text" name="fecha">			
+
+				<input type="submit" value="Actualizar registro" name="btnActualizar">
+			</form>
+			<p>____________________________________________________________________________________________________________________</p>
+			</form>
+		</div>
+	</body>
+</html>
