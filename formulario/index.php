@@ -201,7 +201,7 @@
 
 		</div>
 	
-		<h1>FORMULARIOS SISTEMA AGENDA MEDICA</h1>
+		<h1>FORMULARIOS SISTEMA AGENDA MEDICA ONLINE</h1>
 			<form action="almacenar.php" method="POST" name="form1">
 				<fieldset>
 				<legend>INGRESO PACIENTE</legend>
